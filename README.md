@@ -9,5 +9,5 @@ Repo ini merupakan hasil challenge dari website [codedesign](https://codedesign.
 
 ## Screenshot
 
-- ![dekstop](/screenshot/dekstop.png)
+- ![desktop](/screenshot/desktop.png)
 - ![mobile](/screenshot/mobile.png)
