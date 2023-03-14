@@ -10,4 +10,4 @@ Repo ini merupakan hasil challenge dari website [codedesign](https://codedesign.
 ## Screenshot
 
 - ![dekstop](/screenshot/dekstop.png)
-- ![mobile](/screenshot/mobile.png
+- ![mobile](/screenshot/mobile.png)
