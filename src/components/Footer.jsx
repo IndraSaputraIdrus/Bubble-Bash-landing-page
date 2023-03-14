@@ -1,39 +1,49 @@
 import clsx from "clsx";
 import Logo from "./Logo";
 
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { list } from "postcss";
 
 export default function Footer() {
   return (
     <footer className="bg-secondary-100">
       <div className="container px-7 mx-auto pt-32 pb-16">
-        <div className="grid grid-cols-2 gap-44">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-44">
           <div>
             <Logo className="text-primary-200" />
-            <p className={clsx("mt-4", "text-lg", "text-primary-200/70")}>
+            <p
+              className={clsx(
+                "mt-4",
+                "text-base lg:text-lg",
+                "text-primary-200/70"
+              )}
+            >
               Introducing, We are Bubble Bash digital agency company with more
               than 6 years of experience. We are committed to serve with all our
               heart
             </p>
             <ul
               className={clsx(
-                "mt-7 text-3xl leading-[0]",
+                "mt-7 leading-[0]",
                 "flex gap-4 items-center",
-                "transition duration-300 ease-in-out"
+                "transition duration-300 ease-in-out",
+                "text-3xl"
               )}
             >
               {listIcon.map((item) => (
                 <li key={item.id}>
-                  <a className="hover:text-primary-100/70" href={item.link}>
+                  <a
+                    className="hover:text-primary-100/70"
+                    target={item.target ?? ""}
+                    href={item.link}
+                  >
                     {item.icon}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="flex items-start justify-between text-lg">
+          <div className="flex items-start justify-between text-medium lg:text-lg">
             {navLinks.map((link) => (
               <div key={link.id}>
                 <h5
@@ -71,6 +81,12 @@ const listIcon = [
   { id: 2, link: "#footer", icon: <AiFillTwitterCircle /> },
   { id: 3, link: "#footer", icon: <FaInstagram /> },
   { id: 4, link: "#footer", icon: <FaLinkedin /> },
+  {
+    id: 5,
+    link: "https://github.com/IndraSaputraIdrus/Bubble-Bash-landing-page",
+    icon: <FaGithub />,
+    target: "__blank",
+  },
 ];
 
 const navLinks = [

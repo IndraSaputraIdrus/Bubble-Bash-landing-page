@@ -26,10 +26,12 @@ export default function Portfolio() {
                   className="block w-full h-full object-cover"
                 />
               </div>
-              <h5 className="text-2xl font-semibold mt-4 truncate">
+              <h5 className="text-xl lg:text-2xl font-semibold mt-4 truncate">
                 {item.title}
               </h5>
-              <p className="text-lg text-primary-200/70 mt-2">{item.desc}</p>
+              <p className="text-sm lg:text-lg text-primary-200/70 mt-2">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

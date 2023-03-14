@@ -32,9 +32,11 @@ export default function Services() {
                 "shadow-lg"
               )}
             >
-              <span className="text-5xl">{item.icon}</span>
-              <h5 className="text-2xl mt-4">{item.title}</h5>
-              <p className="text-lg text-primary-200/70 mt-2">{item.desc}</p>
+              <span className="text-3xl lg:text-5xl">{item.icon}</span>
+              <h5 className="text-xl lg:text-2xl mt-4">{item.title}</h5>
+              <p className="text-base lg:text-lg text-primary-200/70 mt-2">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>

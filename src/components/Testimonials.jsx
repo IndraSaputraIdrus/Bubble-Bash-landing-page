@@ -13,7 +13,7 @@ export default function Testimonials() {
           heading="Client Reviews"
           subHeading="What Our Happy Client Say About Us"
         />
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {listTestimonial.map((item) => (
             <div key={item.id} className="p-6 border-2 border-primary-200">
               <h3
@@ -25,7 +25,13 @@ export default function Testimonials() {
               >
                 {item.title}
               </h3>
-              <p className={clsx("mb-5", "text-lg", "text-primary-200/70")}>
+              <p
+                className={clsx(
+                  "mb-5",
+                  "text-base lg:text-lg",
+                  "text-primary-200/70"
+                )}
+              >
                 {item.desc}
               </p>
               <div className="flex items-center gap-4">

@@ -1,38 +1,29 @@
 import clsx from "clsx";
+import { useState } from "react";
+import Hamburger from "./Hamburger";
 import Logo from "./Logo";
-
-const navLinks = [
-  { id: "home", text: "Home" },
-  { id: "ourServices", text: "Our Services" },
-  { id: "portfolio", text: "Portfolio" },
-  { id: "testimonials", text: "Testimonials" },
-  { id: "contactUs", text: "Contact Us" },
-];
+import Navlinks from "./Navlinks";
 
 export default function Navbar() {
+  const [active, setActive] = useState(false);
+
   return (
-    <header className="bg-primary-100">
+    <header
+      className={clsx(
+        "bg-primary-100",
+        "fixed top-0 left-0 z-10",
+        "w-full",
+        "lg:static",
+        "shadow lg:shadow-none"
+      )}
+    >
       <div className="container mx-auto px-7">
-        <div className={clsx("flex items-center justify-between", "py-10")}>
+        <div
+          className={clsx("flex items-center justify-between", "py-5 lg:py-10")}
+        >
           <Logo className="text-secondary-100" />
-          <ul
-            className={clsx(
-              "flex items-center space-x-10",
-              "text-xl",
-              "text-secondary-100/70"
-            )}
-          >
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <a
-                  className={clsx("hover:text-secondary-100")}
-                  href={`#${link.id}`}
-                >
-                  {link.text}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <Navlinks active={active} onClick={setActive} />
+          <Hamburger active={active} onClick={setActive} />
         </div>
       </div>
     </header>
